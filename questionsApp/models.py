@@ -1,5 +1,4 @@
 from django.db import models
-from matplotlib.pyplot import title
 
 
 class Question(models.Model):
