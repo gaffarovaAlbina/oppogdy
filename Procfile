@@ -1,0 +1,1 @@
+web: gunicorn oppogdy.wsgi --log-file -
