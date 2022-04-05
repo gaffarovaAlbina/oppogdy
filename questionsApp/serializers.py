@@ -36,7 +36,7 @@ class QuestionAddSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source="owner.username")
+    owner = PersonSerializer()
 
     class Meta:
         model = Comment
@@ -44,7 +44,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class CommentDetailSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source="owner.username")
+    owner = PersonSerializer()
     question = serializers.ReadOnlyField(source="question.title")
 
     class Meta:

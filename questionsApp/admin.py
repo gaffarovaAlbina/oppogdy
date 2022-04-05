@@ -14,4 +14,7 @@ class QuestionAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     """Админка комментария"""
 
-    list_display = ("id", "body", "question", "owner")
+    list_display = ("id", "body", "question", "owner_name")
+
+    def owner_name(self, obj):
+        return "%s %s" % (obj.owner.first_name, obj.owner.last_name)
