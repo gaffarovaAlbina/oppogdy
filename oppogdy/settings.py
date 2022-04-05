@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get(
 # DEBUG = False
 DEBUG = bool(os.environ.get("DJANGO_DEBUG", True))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sheltered-anchorage-07964.herokuapp.com','127.0.0.1']
 
 
 # Application definition
